@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CinemaStoreContainer" CdmEntityContainer="CinemaContainer">
+    <EntitySetMapping Name="Films">
+      <EntityTypeMapping TypeName="IsTypeOf(Cinema.Film)">
+        <MappingFragment StoreEntitySet="Films">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Genre" ColumnName="Genre" />
+          <ScalarProperty Name="Age_Restrictions" ColumnName="Age_Restrictions" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Poster" ColumnName="Poster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="IsTypeOf(Cinema.Session)">
+        <MappingFragment StoreEntitySet="Sessions">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cinemas">
+      <EntityTypeMapping TypeName="IsTypeOf(Cinema.Cinema)">
+        <MappingFragment StoreEntitySet="Sessions">
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

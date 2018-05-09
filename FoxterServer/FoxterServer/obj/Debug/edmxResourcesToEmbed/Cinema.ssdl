@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Cinema.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CinemaStoreContainer">
+    <EntitySet Name="Cinemas" EntityType="Cinema.Store.Cinemas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Films" EntityType="Cinema.Store.Films" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sessions" EntityType="Cinema.Store.Sessions" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FilmSession" Association="Cinema.Store.FilmSession">
+      <End Role="Film" EntitySet="Films" />
+      <End Role="Session" EntitySet="Sessions" />
+    </AssociationSet>
+    <AssociationSet Name="CinemaSession" Association="Cinema.Store.CinemaSession">
+      <End Role="Cinema" EntitySet="Cinemas" />
+      <End Role="Session" EntitySet="Sessions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cinemas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="geography" Nullable="false" SRID="4326" />
+    <Property Name="Info" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Video" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Films">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Genre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age_Restrictions" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rating" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Info" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Video" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Poster" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sessions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Price" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Time" Type="time" Nullable="false" Precision="7" />
+    <Property Name="Film_Id" Type="int" Nullable="false" />
+    <Property Name="Cinema_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FilmSession">
+    <End Role="Film" Type="Cinema.Store.Films" Multiplicity="1" />
+    <End Role="Session" Type="Cinema.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Film">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="Film_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CinemaSession">
+    <End Role="Cinema" Type="Cinema.Store.Cinemas" Multiplicity="1" />
+    <End Role="Session" Type="Cinema.Store.Sessions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cinema">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="Cinema_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

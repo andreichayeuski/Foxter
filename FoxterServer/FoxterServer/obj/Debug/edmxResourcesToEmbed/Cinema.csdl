@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Cinema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="CinemaContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cinemas" EntityType="Cinema.Cinema" />
+    <EntitySet Name="Films" EntityType="Cinema.Film" />
+    <EntitySet Name="Sessions" EntityType="Cinema.Session" />
+  </EntityContainer>
+  <EntityType Name="Cinema">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="Geography" Nullable="false" />
+    <Property Name="Info" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Video" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Time" Type="String" Nullable="false" />
+    <NavigationProperty Name="Session" />
+  </EntityType>
+  <EntityType Name="Film">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Genre" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Age_Restrictions" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Rating" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Info" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Video" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Poster" Type="String" Nullable="false" />
+    <NavigationProperty Name="Session" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Time" />
+    </Key>
+    <Property Name="Price" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Cinema" />
+    <NavigationProperty Name="Film" />
+  </EntityType>
+</Schema>

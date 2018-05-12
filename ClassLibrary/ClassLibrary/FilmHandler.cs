@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters;
 using System.Runtime.Serialization;
+using System.Text.RegularExpressions;
 namespace ClassLibrary
 {
     public class FilmHandler
@@ -25,6 +26,36 @@ namespace ClassLibrary
             BinaryFormatter bf = new BinaryFormatter();
             result = (List<Film>)bf.Deserialize(stream);
             return result;
+        }
+
+        public static List<string> GetListOfImages(string str)
+        {
+            List<string> list = new List<string>();
+            Regex regex = new Regex("[А-Я][а-я]+");
+            MatchCollection matches = regex.Matches(str);
+            if (matches.Count > 0)
+            {
+                foreach(string s in matches)
+                {
+                    list.Add(s);
+                }
+            }
+            return list;
+        }
+
+        public static List<string> GetListOfGenres(string str)
+        {
+            List<string> list = new List<string>();
+            Regex regex = new Regex("(?:[\"'](?<1>[^\"']*)[\"']|(?<1>\\S+))");
+            MatchCollection matches = regex.Matches(str);
+            if (matches.Count > 0)
+            {
+                foreach (string s in matches)
+                {
+                    list.Add(s);
+                }
+            }
+            return list;
         }
     }
 }

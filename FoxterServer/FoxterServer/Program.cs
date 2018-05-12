@@ -70,14 +70,14 @@ namespace FoxsterServer
             {
                 //ReadDataAsync().GetAwaiter();
                 //ConnectWithDB().GetAwaiter();
-                
+
                 using (FilmContext filmContext = new FilmContext())
                 {
                     Console.WriteLine("Start searching info");
                     List<Film> films = FilmContext.GetListOfFilms();
 
                     Console.WriteLine("Work with database");
-                    //FilmContext.CheckAndUpdateFilmInTable(filmContext, films);
+                    filmContext.CheckAndUpdateFilmInTable(films);
                     Console.WriteLine("Elements from database");
                     foreach (Film a in filmContext.Films)
                     {

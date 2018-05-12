@@ -44,13 +44,13 @@ namespace FoxsterServer
             return films;
         }
 
-        public static void CheckAndUpdateFilmInTable(FilmContext filmContext, List<Film> films)
+        public void CheckAndUpdateFilmInTable(List<Film> films)
         {
             foreach (Film a in films)
             {
-                if (!filmContext.Films.Any(u => (u.Name == a.Name)))
+                if (this.Films.Count<Film>() == 0 || !this.Films.Any(u => (u.Name == a.Name)))
                 {
-                    filmContext.Films.Add(a);
+                    this.Films.Add(a);
                 }
                 else
                 {
@@ -58,7 +58,7 @@ namespace FoxsterServer
                 }
                 Console.WriteLine(a.Name);
             }
-            filmContext.SaveChanges();
+            this.SaveChanges();
         }
 
         public DbSet<Film> Films { get; set; }

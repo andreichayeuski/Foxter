@@ -1,4 +1,4 @@
-﻿use FilmsDB
+﻿use Films
 
 create table Films
 (
@@ -15,5 +15,7 @@ create table Films
 	Video nvarchar(max) null,
 	Images nvarchar(max) null
 )
+insert into Films values
+(1,'','','','','','','','','','','')
 select * from Films
 drop table Films

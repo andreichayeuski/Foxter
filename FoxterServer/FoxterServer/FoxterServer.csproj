@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncServ.cs" />
+    <Compile Include="Film\CinemaContext.cs" />
     <Compile Include="Film\FilmContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,7 +118,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL-query\Create_Table_Film.sql" />
+    <Content Include="SQL-query\Create_Films.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

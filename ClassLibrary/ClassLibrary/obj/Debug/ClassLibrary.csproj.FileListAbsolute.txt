@@ -1,0 +1,12 @@
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\obj\Debug\ClassLibrary.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxsterServer\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\bin\Debug\ClassLibrary.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\ClassLibrary\ClassLibrary\obj\Debug\ClassLibrary.pdb

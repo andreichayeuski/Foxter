@@ -10,11 +10,11 @@ namespace FoxsterServer
         {
             try
             {
-                using (FilmContext filmContext = new FilmContext())
+                using (FilmContext filmContext = new FilmContext())//написать Ане логику взаимодействия с сервером
                 {
                     start: Console.WriteLine("\nPlease, select the operating mode:\n1 - Update information in database;\n" +
-                        "2 - Start waiting for connections\n" + 
-                        "Q - Exit");
+                        "2 - Start waiting for connections;\n" +
+                        "Q - Exit..");
                     switch (Console.ReadKey(true).Key)
                     {
                         case ConsoleKey.D1:
@@ -23,9 +23,11 @@ namespace FoxsterServer
                                 Console.WriteLine("Start searching info");
                                 List<Film> films = FilmContext.GetListOfFilms();
                                 List<Cinema> cinemas = CinemaContext.GetListOfCinemas();
+                                List<SessionFromFile> sessions_from_file = SessionContext.GetListOfSessions();
                                 Console.WriteLine("Work with database");
                                 filmContext.CheckAndUpdateFilmInTable(films);
                                 filmContext.CheckAndUpdateCinemaInTable(cinemas);
+                                SessionContext.MakeListOfSessionAndAddToDatabase(sessions_from_file, filmContext);
                                 goto start;
                             }
                         case ConsoleKey.D2:

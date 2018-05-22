@@ -34,10 +34,10 @@ namespace FoxsterServer
             string extension = ".xml";
             List<Film> films = new List<Film>();
 
-            for(int i = 0; true; i++)
+            for (int i = 0; true; i++)
             {
                 Film film;
-                filename = @"D:\Документы\Университет\4 семестр\ООТП\Курсовой\Parser\Parser\";
+                filename = @"D:\Документы\Университет\4 семестр\ООТП\Курсовой\Parser\Parser\Film\";
                 filename += i + extension;
                 if (File.Exists(filename))
                 {
@@ -91,5 +91,20 @@ namespace FoxsterServer
         public DbSet<Cinema> Cinemas { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Session> Sessions { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Session>()
+                .HasRequired<Film>(s => s.Film)
+                .WithMany(g => g.Sessions)
+                .HasForeignKey<int>(s => s.FilmId);
+
+            modelBuilder.Entity<Session>()
+                .HasRequired<Cinema>(s => s.Cinema)
+                .WithMany(g => g.Sessions)
+                .HasForeignKey<int>(s => s.CinemaId);
+        }
     }
 }

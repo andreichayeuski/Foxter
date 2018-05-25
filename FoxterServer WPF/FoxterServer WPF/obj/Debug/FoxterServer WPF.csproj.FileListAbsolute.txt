@@ -1,0 +1,32 @@
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.csprojResolveAssemblyReference.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\Database.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\MainWindow.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\App.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF_MarkupCompile.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF_MarkupCompile.lref
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\FoxterServer WPF.exe.config
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\FoxterServer WPF.exe
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\FoxterServer WPF.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\ClassLibrary.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\EntityFramework.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\MaterialDesignColors.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\EntityFramework.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\MaterialDesignColors.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\ru\EntityFramework.resources.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\App.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\Database.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\MainWindow.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.g.resources
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer_WPF.Properties.Resources.resources
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.csproj.GenerateResource.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.csproj.CoreCompileInputs.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.csproj.CopyComplete
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.exe
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\FoxterServer WPF.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterServer WPF\FoxterServer WPF\obj\Debug\ResourceDictionary\DataStyle.baml

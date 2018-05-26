@@ -32,12 +32,12 @@ namespace FoxterServer_WPF
             TypeOfTheInfo = src;
         }
 
-        public static void SetContext(FilmContext context)
+        public static void SetContext(FoxterContext context)
         {
-            filmContext = context;
+            foxterContext = context;
         }
 
-        public static volatile FilmContext filmContext;
+        public static volatile FoxterContext foxterContext;
 
         public AsyncServ()
         {
@@ -117,7 +117,7 @@ namespace FoxterServer_WPF
                 if (content.Contains("Films"))
                 {
                     List<Film> list = new List<Film>();
-                    foreach (Film f in filmContext.Films)
+                    foreach (Film f in foxterContext.Films)
                     {
                         list.Add(f);
                     }
@@ -126,7 +126,7 @@ namespace FoxterServer_WPF
                 else if (content.Contains("Cinemas"))
                 {
                     List<Cinema> list = new List<Cinema>();
-                    foreach (Cinema c in filmContext.Cinemas)
+                    foreach (Cinema c in foxterContext.Cinemas)
                     {
                         list.Add(c);
                     }
@@ -135,7 +135,7 @@ namespace FoxterServer_WPF
                 else if (content.Contains("Users"))
                 {
                     List<User> list = new List<User>();
-                    foreach (User u in filmContext.Users)
+                    foreach (User u in foxterContext.Users)
                     {
                         list.Add(u);
                     }
@@ -143,8 +143,8 @@ namespace FoxterServer_WPF
                 }
                 else if (TypeOfTheInfo == TypeOfInfo.User)
                 {
-                    filmContext.Users.Add(UserHandler.ConvertByteArrayToUser(state.buffer));
-                    filmContext.SaveChanges();
+                    foxterContext.Users.Add(UserHandler.ConvertByteArrayToUser(state.buffer));
+                    foxterContext.SaveChanges();
                     TypeOfTheInfo = TypeOfInfo.Default;
                     Send(handler, "User was added to database");
                 }

@@ -24,8 +24,11 @@ namespace ClassLibrary
         public string Video { get; set; }
         public string Images { get; set; }
 
-        [ForeignKey("Session")]
-        public virtual List<Session> Sessions { get; set; }
+        
+        public Favorites Favorites { get; set; }
+        public int? FavoritesId { get; set; }
+
+        public List<Session> Sessions { get; set; }
 
         public Film()
         {

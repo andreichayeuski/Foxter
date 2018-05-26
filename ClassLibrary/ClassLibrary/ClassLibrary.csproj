@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Cinema\Cinema.cs" />
     <Compile Include="Cinema\CinemaHandler.cs" />
+    <Compile Include="Favourites\Favourites.cs" />
+    <Compile Include="Favourites\FavouritesHandler.cs" />
     <Compile Include="Film\Film.cs" />
     <Compile Include="Film\FilmHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

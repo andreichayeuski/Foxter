@@ -66,6 +66,8 @@ namespace MaterialDesignThemes.Wpf
         /// Display the popup to the right of the toggle, and align the middles.
         /// </summary>
         RightAndAlignMiddles,
+
+        RightAndAllInRight
     }
 
     /// <summary>
@@ -531,6 +533,11 @@ namespace MaterialDesignThemes.Wpf
                     x = targetSize.Width;
                     y = targetSize.Height / 2 - popupSize.Height / 2 - Math.Abs(offset.Y * 2);
                     break;
+                case PopupBoxPlacementMode.RightAndAllInRight:
+                    x = targetSize.Width;
+                    y = targetSize.Height;
+                    break;
+
                 default:
                     throw new ArgumentOutOfRangeException();
             }

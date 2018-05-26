@@ -17,7 +17,7 @@ namespace ClassLibrary
         [ForeignKey("Film")]
         public int FilmId { get; set; }
 
-        public virtual Film Film { get; set; }
-        public virtual Cinema Cinema { get; set; }
+        public Film Film { get; set; }
+        public Cinema Cinema { get; set; }
     }
 }

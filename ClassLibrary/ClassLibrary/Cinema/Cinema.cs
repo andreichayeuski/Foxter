@@ -19,9 +19,11 @@ namespace ClassLibrary
         public string Name { get; set; }
         public string Telephone { get; set; }
         public string Schedule { get; set; }
+        
+        public Favorites Favorites { get; set; }
+        public int? FavoritesId { get; set; }
 
-        [ForeignKey("Session")]
-        public virtual List<Session> Sessions { get; set; }
+        public List<Session> Sessions { get; set; }
 
         public Cinema()
         {

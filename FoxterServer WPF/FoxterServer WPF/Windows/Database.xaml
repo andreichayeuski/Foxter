@@ -15,22 +15,25 @@
     </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
-        <ToggleButton VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Server" IsChecked="True" Grid.Column="0" Grid.Row="0" Margin="0,10,0,0"/>
-        <materialDesign:PopupBox Grid.Column="0" Grid.Row="0" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" PlacementMode="BottomAndAlignCentres" ToolTipService.Placement="Right" ToolTip="ManageItems" Width="65" Height="65" HorizontalAlignment="Center">
+        <materialDesign:PopupBox Grid.Column="2" Grid.Row="0" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" PlacementMode="RightAndAlignMiddles" UnfurlOrientation="Horizontal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTipService.Placement="Left" ToolTip="Manage Items" Width="65" Height="65" >
             <materialDesign:PopupBox.ToggleContent>
                 <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" />
             </materialDesign:PopupBox.ToggleContent>
             <materialDesign:PopupBox.ToggleCheckedContent>
                 <materialDesign:PackIcon Kind="Close" Width="24" Height="24" />
             </materialDesign:PopupBox.ToggleCheckedContent>
-            <StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <Button ToolTip="Add item" Name="Insert_Button" Click="Insert_Button_Click">
                     <materialDesign:PackIcon Kind="Plus" Width="24" Height="24" />
                 </Button>
@@ -43,27 +46,43 @@
             </StackPanel>
         </materialDesign:PopupBox>
 
-        <TabControl x:Name ="MainTab" Grid.Column="1" Grid.RowSpan="2">
+        <TabControl x:Name ="MainTab" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3">
             <TabItem x:Name="UserTab" Header="User">
-                <DataGrid x:Name="UserGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="UserGrid_Loaded" Padding="0" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60">
-                </DataGrid>
+                <DataGrid x:Name="UserGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="UserGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
             </TabItem>
-
+            
             <TabItem x:Name="FilmTab" Header="Films">
-                <DataGrid x:Name="FilmGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="FilmGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" MinRowHeight="40" >
-                    
-                </DataGrid>
+                <DataGrid x:Name="FilmGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="FilmGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" MinRowHeight="40" />
+            </TabItem>
 
-            </TabItem>
             <TabItem x:Name="CinemaTab" Header="Cinema">
-                <DataGrid x:Name="CinemaGrid" Loaded="CinemaGrid_Loaded" HorizontalScrollBarVisibility="Auto">
-                </DataGrid>
+                <DataGrid x:Name="CinemaGrid" Loaded="CinemaGrid_Loaded" HorizontalScrollBarVisibility="Auto" />
             </TabItem>
+
             <TabItem x:Name="SessionTab" Header="Session">
-                <DataGrid x:Name="SessionGrid" Loaded="SessionGrid_Loaded" HorizontalScrollBarVisibility="Auto">
-                </DataGrid>
+                <DataGrid x:Name="SessionGrid" Loaded="SessionGrid_Loaded" HorizontalScrollBarVisibility="Auto"/>
             </TabItem>
         </TabControl>
+
+        <Button x:Name="Update_Button" Content="Update" Style="{StaticResource MaterialDesignRaisedDarkButton}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Width="100" ToolTip="Update" Click="Update_Button_Click"/>
+
+        <ItemsControl x:Name="TypeListBox" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.IsSharedSizeScope="True">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border x:Name="Border" Padding="8" BorderThickness="0 0 0 1" BorderBrush="{DynamicResource MaterialDesignDivider}">
+                        <Grid x:Name="GridThemes">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ToggleButton x:Name="ToggleButton" VerticalAlignment="Center" Unchecked="ToggleButton_Unchecked" Checked="ToggleButton_Checked" IsChecked="{Binding IsSelected}" Style="{StaticResource MaterialDesignActionLightToggleButton}" Content="{Binding Code}" />
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" x:Name="TypeInList" Text="{Binding Table}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        
         <materialDesign:Card VerticalAlignment="Bottom" Grid.Row="1" Width="30" UniformCornerRadius="14" Padding="4">
             <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}" Value="50" IsIndeterminate="True"/>
         </materialDesign:Card>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="FoxterServer_WPF.Server.Server"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FoxterServer_WPF.Server"
+             mc:Ignorable="d" 
+             Height="100" 
+             Width="auto"
+             FontSize="12"
+             FontFamily="Rockwell">
+    <Viewbox>
+        <Grid Background="#FFFDFDFD">
+            <Grid Height="100"
+                  Margin="7">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="1" Grid.Row="0" Name="ServerTextBlock" Margin="15,0,75,155" HorizontalAlignment="Stretch" TextWrapping="Wrap" Width="auto">
+                     <Run Text="Server"/>
+                </TextBlock>
+                <ToggleButton VerticalAlignment="Top" HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Server" IsChecked="False" Grid.Column="1"/>
+
+                <TextBlock Grid.Row="1" Name="EventName" FontWeight="Bold" TextWrapping="Wrap" FontSize="22" Padding="0">
+                     <Run Text="Event Name" />
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>

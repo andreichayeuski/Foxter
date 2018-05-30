@@ -1,0 +1,124 @@
+﻿<UserControl x:Class="CP_WPF.View.CardItemMoreInfoConcert"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CP_WPF.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="auto" 
+             mc:Ignorable="d"              
+             Width="auto"
+             FontFamily="Modern №20" 
+             FontSize="18">
+    <Grid Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" MaxWidth="480"/>
+                <ColumnDefinition MinWidth="490"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="CardInfoMainImg" 
+                       Grid.Column="0" 
+                       Grid.Row="0" 
+                       MaxHeight="360" 
+                       Source="../Resources/Image/pion.jpg" 
+                       Margin="15 15 0 0" 
+                       Stretch="Uniform" 
+                       HorizontalAlignment="Left" 
+                       VerticalAlignment="Top" 
+                       Height="360" 
+                       Width="auto" />
+            <StackPanel Grid.Column="1" Grid.Row="0" Margin="20 10 10 10" HorizontalAlignment="Left">
+                <TextBlock x:Name="EventNameCardMoreInfo" FontSize="28" FontWeight="Bold" Margin="0 5 10 10"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource Address}" Padding="0 5 0 5"/>
+                    <TextBlock x:Name="AddressCardMoreInfo" TextWrapping="Wrap" Padding="0 5 0 5" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource Date}" Padding="0 5 0 5"/>
+                    <TextBlock x:Name="DateCardMoreInfo" TextWrapping="Wrap" Padding="0 5 0 5" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource Time}" Padding="0 5 0 5"/>
+                    <TextBlock x:Name="TimeCardMoreInfo" TextWrapping="Wrap" Padding="0 5 0 5" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{DynamicResource Genres}" Padding="0 5 0 5"/>
+                    <TextBlock x:Name="GenreCardMoreInfo" TextWrapping="Wrap"  Padding="0 5 0 5" />
+                </StackPanel>
+
+            </StackPanel>
+            <materialDesign:PopupBox x:Name="PuppepBoxMore" 
+                                         PlacementMode="BottomAndAlignRightEdges" 
+                                         ToggleCheckedContentClick="PupupBox_Click" 
+                                         Grid.Column="2" 
+                                         Grid.Row="0" 
+                                         Margin="0 15 15 0" 
+                                         Padding="2 0 2 0" 
+                                         Width="25" 
+                                         Height="30" 
+                                         HorizontalAlignment="Right" 
+                                         VerticalAlignment="Top">
+                <StackPanel MinWidth="40">
+                    <Button Click="AddToFavoriteOn_Click" 
+                                x:Name="FavoriteItem" 
+                                Background="Transparent" 
+                                Padding="5">
+                        <materialDesign:PackIcon Kind="Star" 
+                                                     Foreground="Black" 
+                                                     Height="35" 
+                                                     Width="35" />
+                    </Button>
+                    <Button Click="AddToFavoriteOff_Click" 
+                                x:Name="FavoriteItemFull" 
+                                Visibility="Collapsed" 
+                                Background="Transparent" 
+                                Padding="5" >
+                        <materialDesign:PackIcon Kind="Star" 
+                                                 Foreground="#73d9d4" 
+                                                 Height="35" 
+                                                 Width="35" />
+                    </Button>
+                    <Button Click="WrittingComments_Click" 
+                                x:Name="CommentsItem"  
+                                Background="Transparent" 
+                                Padding="5">
+                        <materialDesign:PackIcon Kind="CommentPlusOutline"  
+                                                 Height="35" 
+                                                 Width="35"/>
+                    </Button>
+                </StackPanel>
+            </materialDesign:PopupBox>
+            <StackPanel Grid.ColumnSpan="3" 
+                        Grid.Row="1" 
+                        Margin="10" >
+                <TextBlock x:Name="DescCardMoreInfo" 
+                               TextWrapping="Wrap" 
+                               FontSize="20" 
+                               Padding="0 5 0 5"  
+                               FontWeight="Bold">
+                        <Run Text="{DynamicResource Description}"/>
+                </TextBlock>
+                <TextBlock x:Name="DescriptionCardMoreInfo" 
+                           TextWrapping="Wrap" 
+                           Padding="0 5 0 10" />
+            </StackPanel>
+            <ScrollViewer x:Name="ScrollWrap" 
+                          Grid.Row="2" 
+                          Grid.ColumnSpan="3"  
+                          Margin="5" Cursor="Hand" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Visible" 
+                          ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <WrapPanel Name="Images"
+                           HorizontalAlignment="Center" 
+                           Height="180"/>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</UserControl>

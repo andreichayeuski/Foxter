@@ -16,10 +16,15 @@ namespace ClassLibrary
 
         public List<Film> Films { get; set; }
         public List<Cinema> Cinemas { get; set; }
+        public List<Concert> Concerts { get; set; }
+        public List<Exhibition> Exhibitions { get; set; }
+
         public Favourites()
         {
             this.Films = new List<Film>();
             this.Cinemas = new List<Cinema>();
+            this.Concerts = new List<Concert>();
+            this.Exhibitions = new List<Exhibition>();
         }
     }
 }

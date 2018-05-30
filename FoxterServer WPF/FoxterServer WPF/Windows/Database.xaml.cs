@@ -1,22 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Windows.Controls.Primitives;
 using ClassLibrary;
 
 namespace FoxterServer_WPF
 {
-    public enum All_Table { Films, Cinemas, Sessions, Users };
+    public enum All_Table { Films, Cinemas, Sessions, Users, Favourites, Comments, Concerts, Exhibitions };
 
     public class Tables
     {
@@ -27,7 +19,7 @@ namespace FoxterServer_WPF
         public static List<Tables> GetListOfTables()
         {
             List<Tables> ListTables = new List<Tables>();
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 8; i++)
             {
                 Tables tables = new Tables
                 {
@@ -43,12 +35,15 @@ namespace FoxterServer_WPF
     public partial class Database : Window
     {
         public All_Table Table;
-
+        public Thread thread;
         public FoxterContext foxterContext = new FoxterContext();
 
+        public string Log { get; set; }
         public Database()
         {
+            
             InitializeComponent();
+            this.Log = "";
             this.TypeListBox.ItemsSource = Tables.GetListOfTables();
         }
 
@@ -105,6 +100,58 @@ namespace FoxterServer_WPF
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void FavouritesGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Table = All_Table.Favourites;
+                this.FavouritesGrid.ItemsSource = this.foxterContext.Favourites.ToList<Favourites>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void CommentGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Table = All_Table.Comments;
+                this.CommentGrid.ItemsSource = this.foxterContext.Comments.ToList<Comment>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void ConcertGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Table = All_Table.Concerts;
+                this.ConcertGrid.ItemsSource = this.foxterContext.Concerts.ToList<Concert>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void ExhibitionGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.Table = All_Table.Exhibitions;
+                this.ExhibitionGrid.ItemsSource = this.foxterContext.Exhibitions.ToList<Exhibition>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         #endregion
 
         #region Save, Update, Insert, Delete
@@ -146,6 +193,18 @@ namespace FoxterServer_WPF
                                 {
                                     List<SessionFromFile> sessions_from_file = SessionContext.GetListOfSessions();
                                     this.foxterContext.MakeListOfSessionAndAddToDatabase(sessions_from_file);
+                                    break;
+                                }
+                            case All_Table.Concerts:
+                                {
+                                    List<Concert> concerts = ConcertContext.GetListOfConcerts();
+                                    this.foxterContext.CheckAndUpdateConcertInTable(concerts);
+                                    break;
+                                }
+                            case All_Table.Exhibitions:
+                                {
+                                    List<Exhibition> exhibitions = ExhibitionContext.GetListOfExhibitions();
+                                    this.foxterContext.CheckAndUpdateExhibitionInTable(exhibitions);
                                     break;
                                 }
                             case All_Table.Users:
@@ -306,6 +365,31 @@ namespace FoxterServer_WPF
                 MessageBox.Show("Delete error: " + ex.Message);
             }
         }
-#endregion
+        #endregion
+
+        #region Server
+
+        private void StartServer()
+        {
+            AsyncServ.SetContext(this.foxterContext);
+            this.thread = new Thread(AsyncServ.StartListening);
+            this.thread.Start();
+        }
+
+        private void StopServer()
+        {
+            AsyncServ.StopListening();
+        }
+
+        private void Server_ToggleButton_Checked(object sender, RoutedEventArgs e)
+        {
+            this.StartServer();
+        }
+
+        private void Server_ToggleButton_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.StopServer();
+        }
+        #endregion
     }
 }

@@ -8,25 +8,60 @@
         mc:Ignorable="d"
         Title="Foxter Database" Height="700" Width="1000">
     <Window.InputBindings>
-        <KeyBinding Command="{Binding UserCommands.SomeCommand}" Gesture="Ctrl+S" />
+        <KeyBinding Command="{Binding UserCommands.SaveCommand}" Gesture="Ctrl+S" />
     </Window.InputBindings>
     <Window.CommandBindings>
-        <CommandBinding Command="local:UserCommands.SomeCommand" Executed="Save_Button_Click" />
+        <CommandBinding Command="local:UserCommands.SaveCommand" Executed="Save_Button_Click" />
     </Window.CommandBindings>
+    <Window.Resources>
+        <local:AsyncServ x:Key="AsynchronosServer"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
-        <materialDesign:PopupBox Grid.Column="2" Grid.Row="0" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" PlacementMode="RightAndAlignMiddles" UnfurlOrientation="Horizontal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTipService.Placement="Left" ToolTip="Manage Items" Width="65" Height="65" >
+        <Grid x:Name="ServerGrid" Grid.Row="0" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" VerticalAlignment="Center" Name="ServerTextBlock" TextWrapping="Wrap" Width="auto" Margin="0,0,5,0">
+                     <Run Text="Server"/>
+            </TextBlock>
+            <ToggleButton Grid.Row="0" x:Name="Server_ToggleButton" Checked="Server_ToggleButton_Checked" Unchecked="Server_ToggleButton_Unchecked" HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Server" />
+
+            <TextBlock Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Center" Name="ServerLog" FontWeight="Bold" TextWrapping="Wrap" FontSize="22">
+                     <Run Text="ServerLog" />
+            </TextBlock>
+        </Grid>
+        <TextBox Grid.Column="3" x:Name="ServerLogTextBox" Text="{Binding Path=Log}" Grid.Row="0" Style="{StaticResource MaterialDesignTextAreaTextBox}"
+                                              Margin="0,2,0,0"
+                                              VerticalAlignment="Top"
+                                              HorizontalAlignment="Left"
+                                              Height="98"
+                                              MaxWidth="530"
+                                              Width="auto"
+                                              MinWidth="300"
+                                              AcceptsReturn="True"
+                                              TextWrapping="Wrap"
+                                              VerticalScrollBarVisibility="Auto"
+                                              HorizontalScrollBarVisibility="Auto"
+                                              materialDesign:HintAssist.Hint="Log"
+                                              IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextAreaTextBoxEnabledComboBox}">
+        </TextBox>
+
+        <materialDesign:PopupBox Grid.Column="1" Grid.Row="0" Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}" PlacementMode="RightAndAlignMiddles" UnfurlOrientation="Horizontal" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Left" ToolTipService.Placement="Left" ToolTip="Manage Items" Width="65" Height="65" >
             <materialDesign:PopupBox.ToggleContent>
                 <materialDesign:PackIcon Kind="Pencil" Width="25" Height="25" />
             </materialDesign:PopupBox.ToggleContent>
@@ -46,11 +81,11 @@
             </StackPanel>
         </materialDesign:PopupBox>
 
-        <TabControl x:Name ="MainTab" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="3">
+        <TabControl x:Name ="MainTab" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Grid.RowSpan="3">
             <TabItem x:Name="UserTab" Header="User">
                 <DataGrid x:Name="UserGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="UserGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
             </TabItem>
-            
+
             <TabItem x:Name="FilmTab" Header="Films">
                 <DataGrid x:Name="FilmGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="FilmGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" MinRowHeight="40" />
             </TabItem>
@@ -62,9 +97,25 @@
             <TabItem x:Name="SessionTab" Header="Session">
                 <DataGrid x:Name="SessionGrid" Loaded="SessionGrid_Loaded" HorizontalScrollBarVisibility="Auto"/>
             </TabItem>
+
+            <TabItem x:Name="FavouritesTab" Header="Favourites">
+                <DataGrid x:Name="FavouritesGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="FavouritesGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
+            </TabItem>
+
+            <TabItem x:Name="CommentTab" Header="Comment">
+                <DataGrid x:Name="CommentGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="CommentGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
+            </TabItem>
+
+            <TabItem x:Name="ConcertTab" Header="Concert">
+                <DataGrid x:Name="ConcertGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="ConcertGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
+            </TabItem>
+
+            <TabItem x:Name="ExhibitionTab" Header="Exhibition">
+                <DataGrid x:Name="ExhibitionGrid" CellStyle="{DynamicResource ResourceKey=DataGridCell_MyStyle}" Loaded="ExhibitionGrid_Loaded" HorizontalScrollBarVisibility="Auto" MinColumnWidth="40" RowHeight="40" ColumnWidth="60"/>
+            </TabItem>
         </TabControl>
 
-        <Button x:Name="Update_Button" Content="Update" Style="{StaticResource MaterialDesignRaisedDarkButton}" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" Width="100" ToolTip="Update" Click="Update_Button_Click"/>
+        <Button x:Name="Update_Button" Content="Update" Style="{StaticResource MaterialDesignRaisedDarkButton}" Grid.Column="0" Margin="0,7,0,0" Grid.Row="3" VerticalAlignment="Center" Width="100" ToolTip="Update" Click="Update_Button_Click"/>
 
         <ItemsControl x:Name="TypeListBox" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Grid.IsSharedSizeScope="True">
             <ItemsControl.ItemTemplate>
@@ -82,7 +133,7 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        
+
         <materialDesign:Card VerticalAlignment="Bottom" Grid.Row="1" Width="30" UniformCornerRadius="14" Padding="4">
             <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}" Value="50" IsIndeterminate="True"/>
         </materialDesign:Card>

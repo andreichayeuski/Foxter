@@ -5,10 +5,11 @@ using System.Net.Sockets;
 using System.Net;
 using System.Threading;
 using ClassLibrary;
-
+using System.Threading.Tasks;
+using System.Windows;
 public enum TypeOfInfo
 {
-    Default = 0, Films = 1, Cinemas, Users, User
+    Default = 0, Films = 1, Cinemas, Users, Favourites, Comments, Concerts, Exhibitions, User, Favourite, Comment
 };
 
 public class StateObject
@@ -24,7 +25,7 @@ public class StateObject
 
 namespace FoxterServer_WPF
 {
-    class AsyncServ
+    public class AsyncServ
     {
         public static ManualResetEvent allDone = new ManualResetEvent(false);
         public static void SetTypeInfo(TypeOfInfo src)
@@ -38,13 +39,20 @@ namespace FoxterServer_WPF
         }
 
         public static volatile FoxterContext foxterContext;
-
+        
         public AsyncServ()
         {
 
         }
 
+        public static volatile bool ServerIsOn = false;
+
         public static TypeOfInfo TypeOfTheInfo;
+
+        public static void StopListening()
+        {
+            ServerIsOn = false;
+        }
 
         public static void StartListening()
         {
@@ -53,25 +61,25 @@ namespace FoxterServer_WPF
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
             Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-
+            ServerIsOn = true;
             try
             {
                 listener.Bind(localEndPoint);
                 listener.Listen(100);
 
-                while (true)
+                while (ServerIsOn)
                 {
                     allDone.Reset();
 
-                    Console.WriteLine("Waiting for a connection...");
+                    MessageBox.Show("Waiting for a connection...\n");
                     listener.BeginAccept(new AsyncCallback(AcceptCallback), listener);
 
                     allDone.WaitOne();
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -94,10 +102,6 @@ namespace FoxterServer_WPF
             {
                 Console.WriteLine(ex.Message);
             }
-            finally
-            {
-
-            }
         }
 
         public static void ReceiveCallback(IAsyncResult ar)
@@ -116,29 +120,22 @@ namespace FoxterServer_WPF
 
                 if (content.Contains("Films"))
                 {
+                    TypeOfTheInfo = TypeOfInfo.Default;
                     List<Film> list = new List<Film>();
-                    foreach (Film f in foxterContext.Films)
-                    {
-                        list.Add(f);
-                    }
+                    list.AddRange(foxterContext.Films);
                     Send(handler, list);
                 }
                 else if (content.Contains("Cinemas"))
                 {
                     List<Cinema> list = new List<Cinema>();
-                    foreach (Cinema c in foxterContext.Cinemas)
-                    {
-                        list.Add(c);
-                    }
+                    list.AddRange(foxterContext.Cinemas);
                     Send(handler, list);
                 }
                 else if (content.Contains("Users"))
                 {
+                    TypeOfTheInfo = TypeOfInfo.Default;
                     List<User> list = new List<User>();
-                    foreach (User u in foxterContext.Users)
-                    {
-                        list.Add(u);
-                    }
+                    list.AddRange(foxterContext.Users);
                     Send(handler, list);
                 }
                 else if (TypeOfTheInfo == TypeOfInfo.User)
@@ -146,21 +143,89 @@ namespace FoxterServer_WPF
                     foxterContext.Users.Add(UserHandler.ConvertByteArrayToUser(state.buffer));
                     foxterContext.SaveChanges();
                     TypeOfTheInfo = TypeOfInfo.Default;
-                    Send(handler, "User was added to database");
+                    List<User> list = new List<User>();
+                    list.AddRange(foxterContext.Users);
+                    Send(handler, list);
                 }
                 else if (content.Contains("User"))
                 {
                     TypeOfTheInfo = TypeOfInfo.User;
                     Send(handler, "Start adding to database");
                 }
+                else if (content.Contains("Favourites"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Favourites> list = new List<Favourites>();
+                    list.AddRange(foxterContext.Favourites);
+                    Send(handler, list);
+                }
+                else if (TypeOfTheInfo == TypeOfInfo.Favourite)
+                {
+                    Favourites favourite = FavouritesHandler.ConvertByteArrayToFavourites(state.buffer);
+                    if (foxterContext.Favourites.Find(favourite) != null)
+                    {
+                        foxterContext.Favourites.Find(favourite).Cinemas = favourite.Cinemas;
+                        foxterContext.Favourites.Find(favourite).Films = favourite.Films;
+                    }
+                    else
+                    {
+                        foxterContext.Favourites.Add(favourite);
+                    }
+                    foxterContext.SaveChanges();
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Favourites> list = new List<Favourites>();
+                    list.AddRange(foxterContext.Favourites);
+                    Send(handler, list);
+                }
+                else if (content.Contains("Favourite"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Favourite;
+                    Send(handler, "Start adding to database");
+                }
+                else if (content.Contains("Concerts"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Concert> list = new List<Concert>();
+                    list.AddRange(foxterContext.Concerts);
+                    Send(handler, list);
+                }
+                else if (content.Contains("Exhibitions"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Exhibition> list = new List<Exhibition>();
+                    list.AddRange(foxterContext.Exhibitions);
+                    Send(handler, list);
+                }
+                else if (content.Contains("Comments"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Comment> list = new List<Comment>();
+                    list.AddRange(foxterContext.Comments);
+                    Send(handler, list);
+                }
+                else if (TypeOfTheInfo == TypeOfInfo.Comment)
+                {
+                    Comment comment = CommentHandler.ConvertByteArrayToComment(state.buffer);
+                    foxterContext.Comments.Add(comment);
+                    foxterContext.SaveChanges();
+                    TypeOfTheInfo = TypeOfInfo.Default;
+                    List<Comment> list = new List<Comment>();
+                    list.AddRange(foxterContext.Comments);
+                    Send(handler, list);
+                }
+                else if (content.Contains("Comment"))
+                {
+                    TypeOfTheInfo = TypeOfInfo.Comment;
+                    Send(handler, "Start adding to database");
+                }
                 else
                 {
-                    Console.WriteLine("Error in data");
+                    MessageBox.Show("Error in data");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error!\n" + ex.Message);
+                MessageBox.Show("Error!\n" + ex.Message);
             }
         }
 
@@ -185,6 +250,34 @@ namespace FoxterServer_WPF
                new AsyncCallback(SendCallback), handler);
         }
 
+        public static void Send(Socket handler, List<Favourites> data)
+        {
+            byte[] byteData = FavouritesHandler.ConvertFavouritesListToByteArray(data);
+            handler.BeginSend(byteData, 0, byteData.Length, 0,
+               new AsyncCallback(SendCallback), handler);
+        }
+
+        public static void Send(Socket handler, List<Concert> data)
+        {
+            byte[] byteData = ConcertHandler.ConvertConcertListToByteArray(data);
+            handler.BeginSend(byteData, 0, byteData.Length, 0,
+               new AsyncCallback(SendCallback), handler);
+        }
+
+        public static void Send(Socket handler, List<Exhibition> data)
+        {
+            byte[] byteData = ExhibitionHandler.ConvertExhibitionListToByteArray(data);
+            handler.BeginSend(byteData, 0, byteData.Length, 0,
+               new AsyncCallback(SendCallback), handler);
+        }
+
+        public static void Send(Socket handler, List<Comment> data)
+        {
+            byte[] byteData = CommentHandler.ConvertCommentListToByteArray(data);
+            handler.BeginSend(byteData, 0, byteData.Length, 0,
+               new AsyncCallback(SendCallback), handler);
+        }
+
         public static void Send(Socket handler, string data)
         {
             byte[] byteData = Encoding.ASCII.GetBytes(data);
@@ -200,14 +293,13 @@ namespace FoxterServer_WPF
                 Socket handler = (Socket)ar.AsyncState;
 
                 int bytesSent = handler.EndSend(ar);
-                Console.WriteLine("Sent {0} bytes to client.", bytesSent);
-
+                MessageBox.Show("Server send " + bytesSent + " bytes to client");
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
     }

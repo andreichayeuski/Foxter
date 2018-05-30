@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="CP_WPF.View.LogInControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CP_WPF.View"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="auto" 
+             Width="auto"
+             FontSize="14"
+             FontFamily="Rockwell">
+    <Grid>
+        <StackPanel x:Name="LogInForm" 
+                    Grid.Column ="1" 
+                    Grid.Row="1" 
+                    MinWidth="300"
+                    Background="#8BFFFFFF"                       
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Center"                    
+                    Margin="0,35,50,60">
+            <Grid>
+                <Label Content="{DynamicResource LogIn}" 
+                   FontSize="32" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Left"                   
+                   Margin="20 15 20 0" />
+                <Button x:Name="ButtonArrowLeft" 
+                    Width="30" 
+                    ToolTip="{DynamicResource ArrowLeft}"
+                    Height="30" 
+				    HorizontalAlignment="Right" 
+                    Margin="0 15 15 0" 
+                    BorderBrush="{x:Null}"
+                    Background="Transparent" 
+                    Click="ArrowSignUp">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="../Resources/Image/ArrowLeft.png"/>
+                </Button>
+            </Grid>
+            
+            <Label Content="{DynamicResource WanttoLogIn}"                     
+				   Margin="20 5" />
+            <Separator Margin="20,0,20,0"   
+                       Height="22" 
+                       Background="White" />
+            <StackPanel Margin="10 5">
+                <StackPanel Orientation="Horizontal">
+                    <Border CornerRadius="15"   
+                        Background="White" 
+                        Height="45" 
+                        Margin="5 15" 
+                        MinWidth="260" >
+                        <TextBox x:Name="Username" 
+                             BorderThickness="0"
+                             Padding="5 -20 0 0"
+                             MaxLength="15"
+                             Margin="10 3"
+                             Foreground="Teal"                              
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                             materialDesign:HintAssist.Hint="{DynamicResource HintUserName}"/>
+                    </Border>
+                    <Image Name="Alert_Login"
+                       Source="../Resources/Image/Alert.png"
+                       Margin=" -50,0,0,0"
+                       Width="20"
+                       Height="20"
+                       Visibility="Hidden" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Border CornerRadius="15" 
+                        Background="White" 
+                        Height="45" 
+                        Margin="5 0" 
+                        MinWidth="260">
+                        <PasswordBox x:Name="Password" 
+                                 Margin="10 3" 
+                                 Padding="5 -20 0 0"  
+                                 BorderThickness="0"
+                                 BorderBrush="{x:Null}"
+                                 Foreground="Teal"   
+                                 Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                                 materialDesign:HintAssist.Hint="{DynamicResource HintPassword}" 
+                                 MaxLength="13" />
+                    </Border>
+                    <Image Name="Alert_Password"
+                       Source="../Resources/Image/Alert.png"
+                       Margin=" -50,0,0,0"
+                       Width="20"
+                       Height="20"
+                       Visibility="Hidden" />
+                </StackPanel>                
+                <Border CornerRadius="20" 
+                        Margin="5 30 5 20"
+                        Padding="7" 
+                        Background="#FF0B1517">
+                    <Button Background="Transparent" 
+                            Content="{DynamicResource LogIn}"  
+                            Foreground="White" 
+                            FontSize="20" 
+							Margin="20 0" 
+                            Click="LogInBtn_Click" 
+                            BorderBrush="{x:Null}">
+                    </Button>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

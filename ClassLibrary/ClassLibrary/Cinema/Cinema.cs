@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace ClassLibrary
@@ -20,11 +19,11 @@ namespace ClassLibrary
         public string Telephone { get; set; }
         public string Schedule { get; set; }
         
-        public Favorites Favorites { get; set; }
-        public int? FavoritesId { get; set; }
+        public Favourites Favourites { get; set; }
+        public int? FavouritesId { get; set; }
 
         public List<Session> Sessions { get; set; }
-
+        
         public Cinema()
         {
             this.Sessions = new List<Session>();

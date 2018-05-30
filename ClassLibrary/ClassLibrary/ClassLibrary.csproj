@@ -44,6 +44,12 @@
   <ItemGroup>
     <Compile Include="Cinema\Cinema.cs" />
     <Compile Include="Cinema\CinemaHandler.cs" />
+    <Compile Include="Comment\Comment.cs" />
+    <Compile Include="Comment\CommentHandler.cs" />
+    <Compile Include="Concert\Concert.cs" />
+    <Compile Include="Concert\ConcertHandler.cs" />
+    <Compile Include="Exhibition\Exhibition.cs" />
+    <Compile Include="Exhibition\ExhibitionHandler.cs" />
     <Compile Include="Favourites\Favourites.cs" />
     <Compile Include="Favourites\FavouritesHandler.cs" />
     <Compile Include="Film\Film.cs" />

@@ -11,9 +11,9 @@ namespace FoxterServer_WPF
                 new KeyGesture(Key.S, ModifierKeys.Control, "Ctrl+S")
             };
 
-            SomeCommand = new RoutedUICommand("Some", "SomeCommand", typeof(UserCommands), inputs);
+            SaveCommand = new RoutedUICommand("Save", "SaveCommand", typeof(UserCommands), inputs);
         }
 
-        public static RoutedCommand SomeCommand { get; private set; }
+        public static RoutedCommand SaveCommand { get; private set; }
     }
 }

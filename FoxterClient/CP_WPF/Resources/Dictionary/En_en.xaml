@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CP_WPF.Resources.Dictionary"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="MinimazeApp">Minimaze</v:String>
+    <v:String x:Key="CloseApp">Close</v:String>
+    
+    <v:String x:Key="WithoutAutoriz">Continue without authorization (registration)</v:String>
+    <v:String x:Key="LogIn">Log in</v:String>
+    
+    <v:String x:Key="WanttoLogIn">Want to sign up fill out this form!</v:String>
+    <v:String x:Key="HintUserName">Username ...</v:String>
+    <v:String x:Key="HintPassword">Password ...</v:String>
+    <v:String x:Key="HintConfirmPassword">Confirm password ...</v:String>
+    <v:String x:Key="ArrowLeft">Go to register</v:String>
+    
+    <v:String x:Key="SignUp">Sign Up</v:String>
+    <v:String x:Key="WanttoSignUp">Want to sign up fill out this form!</v:String>
+    <v:String x:Key="ArrowRight">Go to autorization</v:String>
+
+    <v:String x:Key="MainBtnToolbarOpen">Open menu</v:String>
+    <v:String x:Key="MainBtnToolbarClose">Close menu</v:String>
+    <v:String x:Key="Exapnd">Exapnd</v:String>
+    <v:String x:Key="Restore">Restore</v:String>
+    <v:String x:Key="AddPanelOpen">Open an additional panel</v:String>
+    <v:String x:Key="AddPanelClose">Close an additional panel</v:String>
+    <v:String x:Key="LiSu">Log in/Sign up</v:String>
+    <v:String x:Key="Film">Film</v:String>
+    <v:String x:Key="Concert">Concert</v:String>
+    <v:String x:Key="Exhibition">Exhibition</v:String>
+    <v:String x:Key="Cinema">Cinema</v:String>
+    <v:String x:Key="Theater">Theater</v:String>
+    <v:String x:Key="Museum">Museum</v:String>
+    <v:String x:Key="Guest">Guest</v:String>
+    <v:String x:Key="Search">Search</v:String>
+    <v:String x:Key="Favorite">Favorite</v:String>
+    <v:String x:Key="Forum">Forum</v:String>
+
+    <v:String x:Key="EventNameFilm">Event Name</v:String>
+    <v:String x:Key="BoxOffice">At the box office:</v:String>
+    <v:String x:Key="MoreDetails">More Details</v:String>
+    <v:String x:Key="Genres">Genres: </v:String>
+    <v:String x:Key="Year">Year: </v:String>
+    <v:String x:Key="Country">Country: </v:String>
+    <v:String x:Key="Time">Time:</v:String>
+    <v:String x:Key="RatingMDI">Rating MDI: </v:String>
+    <v:String x:Key="Description">Description:</v:String>
+
+    <v:String x:Key="PlaceName">Place Name</v:String>
+    <v:String x:Key="Place">Place: </v:String>
+    <v:String x:Key="Address">Address:</v:String>
+    <v:String x:Key="Shedule">Shedule:</v:String>
+    <v:String x:Key="Phone">Phones:</v:String>
+
+    <v:String x:Key="ConcertName">Concert Name</v:String>
+    <v:String x:Key="Timetable">Timetable: </v:String>
+    <v:String x:Key="Date">Date: </v:String>
+
+    <v:String x:Key="Themes">Themes</v:String>
+    <v:String x:Key="Send">Send</v:String>
+    <v:String x:Key="Clear">Clear</v:String>
+    
+    <v:String x:Key="InputQuery">Please input your query ...</v:String>
+    <v:String x:Key="NotFound">Don't Found!</v:String>
+
+    <v:String x:Key="SetEnglish">English</v:String>
+    <v:String x:Key="SetRussian">Русский</v:String>
+
+
+</ResourceDictionary>

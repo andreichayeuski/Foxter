@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace ClassLibrary
@@ -13,6 +11,6 @@ namespace ClassLibrary
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        public Favorites Favorites { get; set; }
+        public Favourites Favourites { get; set; }
     }
 }

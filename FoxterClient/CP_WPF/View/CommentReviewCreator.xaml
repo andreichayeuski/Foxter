@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="CP_WPF.View.CommentReviewCreator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CP_WPF.View"             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             Height="auto" 
+             Width="613.949"
+             FontSize="16"
+             FontFamily="Rockwell" 
+            >
+    <Grid Background="#404040" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox materialDesign:HintAssist.Hint="Themes"
+                  x:Name="TheamesCreator"
+                  IsEditable="False"
+                  Foreground="White"
+                  Margin="15,15,0,15"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  materialDesign:HintAssist.HintOpacity=".86" 
+                  HorizontalAlignment="Left" 
+                  Width="90">
+            <ComboBoxItem Content="{DynamicResource Film}"/>
+            <ComboBoxItem Content="{DynamicResource Concert}"/>
+            <ComboBoxItem Content="{DynamicResource Exhibition}"/>                
+        </ComboBox>
+        <ComboBox materialDesign:HintAssist.Hint="Place"
+                  IsEditable="False"
+                  x:Name="PlaceCreator"
+                  Foreground="White"
+                  Margin="15,15,0,15"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  materialDesign:HintAssist.HintOpacity=".86" 
+                  HorizontalAlignment="Left" 
+                  Width="90">
+            <ComboBoxItem Content="{DynamicResource Cinema}"/>
+            <ComboBoxItem Content="{DynamicResource Theater}"/>
+            <ComboBoxItem Content="{DynamicResource Museum}"/>           
+        </ComboBox>
+        <TextBlock Text="Author"
+                   x:Name="AuthorName"
+                   Margin="0 5 15 5"
+                   Grid.Column="3"
+                   Grid.Row="0" VerticalAlignment="Center"
+                   Foreground="White"
+                   Opacity="0.86" HorizontalAlignment="Right"/>
+        <TextBox Margin="15,0"
+                 x:Name="TextComment"
+                 Grid.Row="1"
+                 TextWrapping="Wrap"
+                 Background="#f2f2f2"
+                 Grid.ColumnSpan="4"
+                 MinHeight="180" VerticalContentAlignment="Top"/>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" 
+                Width="110"
+                Margin="15,10,0,10"
+                FontSize="18"
+                Grid.Row="2"
+                Click="ToSendComment_Click"
+                Grid.Column="0"
+                ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                Content="{DynamicResource Send}" 
+                HorizontalAlignment="Left"/>
+        <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" 
+                Width="110"
+                Margin="0,10,15,10"
+                FontSize="18"
+                Grid.Row="2"
+                Grid.Column="3"
+                Click="ToClearText_Click"
+                ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                Content="{DynamicResource Clear}" 
+                HorizontalAlignment="Right"/>
+
+
+    </Grid>
+</UserControl>

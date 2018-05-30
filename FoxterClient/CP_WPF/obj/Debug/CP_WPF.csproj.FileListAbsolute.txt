@@ -1,0 +1,239 @@
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe.config
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.pdb
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csprojResolveAssemblyReference.cache
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\App.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.cache
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.lref
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.g.resources
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.Properties.Resources.resources
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.GenerateResource.cache
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CoreCompileInputs.cache
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.exe
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.pdb
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\Logo.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\Logo.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItem.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItem.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.g.cs
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.dll
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.pdb
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\App.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.baml
+D:\Hannika\CP\CP wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CopyComplete
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe.config
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\CP_WPF.pdb
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.dll
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.pdb
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csprojResolveAssemblyReference.cache
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItem.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\Logo.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\App.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.cache
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.lref
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\App.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItem.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\Logo.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.g.resources
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.Properties.Resources.resources
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.GenerateResource.cache
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CoreCompileInputs.cache
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CopyComplete
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.exe
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\CP_WPF.pdb
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\EntityFramework.dll
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\EntityFramework.xml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\Search.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\Search.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\NotFound.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\NotFound.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.baml
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.g.cs
+D:\Hannika\CP\CP_wpf\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe.config
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\EntityFramework.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\EntityFramework.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csprojResolveAssemblyReference.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItem.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\Logo.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\NotFound.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\Search.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\App.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.lref
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\App.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItem.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\Logo.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\NotFound.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\Search.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.g.resources
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.Properties.Resources.resources
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.GenerateResource.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CoreCompileInputs.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CopyComplete
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.exe
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\CP_WPF.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\bin\Debug\CP_WPF.pdb
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\AlertFormComment.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewCreator.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewView.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewCreator.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\AlertFormComment.baml
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewView.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe.config
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\CP_WPF.exe
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\CP_WPF.pdb
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\EntityFramework.dll
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.dll
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\EntityFramework.xml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\MaterialDesignColors.pdb
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csprojResolveAssemblyReference.cache
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\AlertFormComment.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItem.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewCreator.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewView.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\Logo.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\NotFound.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\Search.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\App.g.cs
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.cache
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.lref
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\App.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\AlertFormComment.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItem.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemCinema.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemConcert.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemExhibition.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfo.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewCreator.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\CommentReviewView.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\FavoriteUsersItems.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\Logo.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\MainMenuxaml.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\MainWindow.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\LogInControl.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\NotFound.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\Search.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\View\SignUpControl.baml
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.g.resources
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.Properties.Resources.resources
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.GenerateResource.Cache
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.csproj.CoreCompileInputs.cache
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.exe
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF.pdb
+D:\Andrew\CP\CP\CP_WPF\CP_WPF\obj\Debug\CP_WPF_Content.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF.csprojResolveAssemblyReference.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItem.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemCinema.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemConcert.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemExhibition.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemMoreInfo.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemMoreInfoCinema.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemMoreInfoConcert.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CardItemMoreInfoExhibition.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CommentReviewCreator.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\CommentReviewView.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\FavoriteUsersItems.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\Logo.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\MainMenuxaml.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\MainWindow.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\LogInControl.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\NotFound.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\Search.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\View\SignUpControl.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\App.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF_Content.g.cs
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.cache
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF_MarkupCompile.lref
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF.exe
+D:\Документы\Университет\4 семестр\ООТП\Курсовой\FoxterClient\CP_WPF\obj\Debug\CP_WPF.pdb

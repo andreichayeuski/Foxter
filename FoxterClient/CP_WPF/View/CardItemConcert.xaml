@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="CP_WPF.View.CardItemConcert"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CP_WPF.View"
+             mc:Ignorable="d"
+             Height="auto" 
+             Width="220"
+             FontSize="12"
+             FontFamily="Rockwell">
+    <Viewbox>
+        <Grid Background="#FFFDFDFD">
+            <Grid Width="220" Height="360" Margin="7">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="175" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image Name="MainImageConcert" Source="../Resources/Image/pion.jpg"  Stretch="UniformToFill" />
+                    <Border Grid.Row="0" x:Name="AddFavOffConcert" Panel.ZIndex="2" CornerRadius="30" Padding="2 0 2 2"  Background="#FF175551" Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 -15 10 -15" >
+                        <Button  HorizontalAlignment="Center" VerticalAlignment="Center" Click="DeleteToFavoriteConcert_Click">
+                            <Image x:Name="AddFavImageFullConcert" Source="../Resources/Image/FullStarWhite.png" Width="30" Height="30"/>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="0" 
+                            x:Name="AddFavOfConcert" 
+                            Panel.ZIndex="2" 
+                            CornerRadius="30" 
+                            Padding="2"  
+                            Background="#FF175551" 
+                            Width="40" 
+                            Height="40" 
+                            HorizontalAlignment="Right" 
+                            VerticalAlignment="Bottom" 
+                            Margin="0 -15 10 -15" >
+                        <Button Click="DeleteToFavoriteConcert_Click">
+                            <Image x:Name="AddFavImageFull" 
+                                   Source="../Resources/Image/FullStarWhite.png" 
+                                   Width="30" 
+                                   Height="30"/>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Border>
+                    <Border Grid.Row="0" 
+                            x:Name="AddFavOnConcert"  
+                            Panel.ZIndex="2"  
+                            CornerRadius="30"  
+                            Background="#FF175551"  
+                            Padding="2 0 2 2" 
+                            Width="40" 
+                            Height="40" 
+                            HorizontalAlignment="Right" 
+                            VerticalAlignment="Bottom" 
+                            Margin="0 -15 10 -15" >
+                        <Button  HorizontalAlignment="Center" 
+                                 VerticalAlignment="Center" 
+                                 Click="AddToFavoriteConcert_Click">
+                            <Image x:Name="AddFavImage" 
+                                   Source="../Resources/Image/StarWhite.png" 
+                                   Width="30" 
+                                   Height="30"/>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Border>
+                    <StackPanel Grid.Row="1" Margin="5 10 5 0">
+                        <TextBlock Name="EventNameConcert" FontWeight="Bold" TextWrapping="Wrap" FontSize="20" Padding="0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <TextBlock Name="GenreConcert" TextWrapping="Wrap" VerticalAlignment="Center" Margin="0 10 0 3" />
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">
+                            <Run Text="{DynamicResource Place}"/>
+                            </TextBlock>
+                            <TextBlock Name="PlaceCocert" TextWrapping="Wrap" VerticalAlignment="Center">
+                                 <Run Text="Minsk"/>
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">
+                            <Run Text="{DynamicResource Timetable}"/>
+                            </TextBlock>
+                            <TextBlock Name="TimetableConcert" TextWrapping="Wrap" VerticalAlignment="Center">
+                                <Run Text="6 July"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border x:Name="BtnMoreDetails" 
+                            Grid.Row="2" 
+                            Background="#FF0D302E"
+                            Margin="0 5 0 0" 
+                            Padding="5">
+                        <Button Click="DetailsConcert_Click" 
+                                Background="Transparent" 
+                                x:Name="Details" 
+                                FontSize="18" 
+                                BorderBrush="{x:Null}" 
+                                FontWeight="Bold" 
+                                Foreground="White" 
+                                Content="{DynamicResource MoreDetails}">
+                        </Button>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>
+

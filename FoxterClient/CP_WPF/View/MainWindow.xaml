@@ -1,0 +1,116 @@
+﻿<Window x:Class="CP_WPF.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CP_WPF.View"
+        mc:Ignorable="d"
+        x:Name="Foxter_app"
+        Title="Foxter" 
+        Height="600"
+        MaxHeight="640"
+        Background="White"
+        AllowsTransparency="true"
+        Width="900"
+        MaxWidth="1024"
+        WindowStyle="None"
+        AllowDrop="True"
+        Icon="../Resources/Image/IconFox.png"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="0" Source="../Resources/Image/viiy.jpg" Grid.ColumnSpan="2" StretchDirection="UpOnly" Grid.RowSpan="2"/>
+
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonEnglish" 
+                    Click="ButtonEnglish_Click" 
+                    Grid.Column="0"
+                    Width="20" 
+                    Height="20"  
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center" 
+                    Margin="5" 
+                    BorderThickness="0"
+                    Background="Transparent" 
+                    ToolTip="{DynamicResource SetEnglish}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+                <Image Source="../Resources/Image/English.png"/>
+            </Button>
+            <Button x:Name="ButtonClRussian" 
+                        Click="ButtonCRussian_Click" 
+                        Width="20" 
+                        Grid.Column="1"
+                        Height="20"  
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Left" 
+                        Margin="5" 
+                        Background="Transparent" 
+                        BorderThickness="0" 
+                        Cursor="Hand" 
+                        ToolTip="{DynamicResource SetRussian}">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Button.Template>
+                <Image Source="../Resources/Image/Russian.png"/>
+            </Button>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="1" CornerRadius="20" Margin="0 10 5 0" 
+				VerticalAlignment="Top" HorizontalAlignment="Right">
+                <Button x:Name="ButtonMinimaze" Click="ButtonMinimaze_Click" Width="20" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5" 
+                    Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" Cursor="Hand" ToolTip="{DynamicResource MinimazeApp}">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="/Resources/Image/MinimazeBlack.png"/>
+                </Button>
+            </Border>
+            <Border Grid.Column="2" CornerRadius="20" Margin="0 10 5 0"
+				VerticalAlignment="Top" HorizontalAlignment="Right">
+                <Button x:Name="ButtonClose" Click="ButtonClose_Click" Width="20" Height="20"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5" 
+                    Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" Cursor="Hand" ToolTip="{DynamicResource CloseApp}">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Image Source="/Resources/Image/Close.png"/>
+                </Button>
+            </Border>
+
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" x:Name="MainWindowCP">
+
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1" x:Name="MainWindowRight">
+
+        </Grid>
+    </Grid>
+</Window>

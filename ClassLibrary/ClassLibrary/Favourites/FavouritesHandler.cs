@@ -25,5 +25,25 @@ namespace ClassLibrary
             result = (List<Favourites>)bf.Deserialize(stream);
             return result;
         }
+
+        public static Favourites ConvertByteArrayToFavourites(byte[] bytearray)
+        {
+            MemoryStream stream = new MemoryStream();
+            BinaryWriter binaryFormatter = new BinaryWriter(stream);
+            Favourites result = new Favourites();
+            stream.Write(bytearray, 0, bytearray.Length);
+            stream.Seek(0, SeekOrigin.Begin);
+            BinaryFormatter bf = new BinaryFormatter();
+            result = (Favourites)bf.Deserialize(stream);
+            return result;
+        }
+
+        public static byte[] ConvertFavouritesToByteArray(Favourites favourites)
+        {
+            MemoryStream stream = new MemoryStream();
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            binaryFormatter.Serialize(stream, favourites);
+            return stream.ToArray();
+        }
     }
 }
